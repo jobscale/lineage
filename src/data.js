@@ -74,7 +74,7 @@ const items = {
     title: '4:30 アジト個人クエスト',
     checked: undefined,
   },
-  feeld: {
+  field: {
     title: '4:00 フィールドボス',
     checked: undefined,
   },
@@ -82,7 +82,7 @@ const items = {
     title: '4:00 ワールドレイド：アンタラス',
     checked: undefined,
   },
-  varacas: {
+  varacus: {
     title: '4:00 ヒーローレイド：ヴァラカス',
     checked: undefined,
   },

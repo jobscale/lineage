@@ -5,6 +5,16 @@
   font-size: min(2vw, 2vh);
 }
 
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #333;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -89,7 +99,7 @@ label.off {
 }
 
 .floor {
-  margin-top: 3em;
+  margin: 3em 0;
   display: flex;
   justify-content: center;
   align-items: center;
