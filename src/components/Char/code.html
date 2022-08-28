@@ -13,4 +13,8 @@
     </span>
   </div>
   <Daily :app="app" :items="char.items" />
+  <div class="textarea">
+    <div ref="box" class="textarea-box"></div>
+    <textarea ref="input" class="textarea-input" v-model="char.memo" placeholder="メモ"></textarea>
+  </div>
 </section>

@@ -25,7 +25,7 @@ export default {
     init() {
       this.initCharData();
       this.resetCharData();
-  
+
       this.app.append = () => this.append();
       this.app.reset0 = () => this.reset0();
       this.app.reset4 = () => this.reset4();
@@ -58,7 +58,7 @@ export default {
           items: JSON.parse(JSON.stringify(items)),
         });
       }
-  
+
       this.app.share = this.sanitize(share, this.app.share);
       this.app.chars.forEach(char => {
         char.items = this.sanitize(items, char.items);
@@ -93,7 +93,7 @@ export default {
     },
 
     reset4() {
-      const target = ['pan', 'tower', 'battle', 'elite', 'friend', 'guild', 'free', 'greedy'];
+      const target = ['pan', 'tower', 'battle', 'elite', 'friend', 'guild', 'free', 'greedy', 'field'];
       this.app.chars.forEach(char => {
         Object.keys(char.items).forEach(key => {
           if (target.indexOf(key) === -1) return;
@@ -102,7 +102,7 @@ export default {
       });
 
       // TODO: start of week hook and store data.
-      if (dayjs().day() === 0) {
+      if (dayjs().day() === 1) {
         const weekly = ['gran'];
         this.app.chars.forEach(char => {
           Object.keys(char.items).forEach(key => {
@@ -112,7 +112,7 @@ export default {
         });
       }
 
-      const targetShare = ['weekly', 'collect', 'equipment', 'summon', 'dimension', 'world'];
+      const targetShare = ['weekly', 'collect', 'equipment', 'summon', 'dimension', 'experience', 'adena', 'event'];
       Object.keys(this.app.share).forEach(key => {
         if (targetShare.indexOf(key) === -1) return;
         this.app.share[key].checked = false;

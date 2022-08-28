@@ -7,6 +7,13 @@ export default {
     Daily,
   },
 
+  mounted() {
+    this.$refs.input.addEventListener('input', () => {
+      this.$refs.box.textContent = this.$refs.input.value + '\u200b';
+    });
+    this.$refs.box.textContent = this.$refs.input.value + '\u200b';
+  },
+
   methods: {
     isUp() {
       const index = this.app.chars.findIndex(item => item.unique === this.char.unique);

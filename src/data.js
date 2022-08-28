@@ -78,16 +78,16 @@ const items = {
     title: '4:00 フィールドボス',
     checked: undefined,
   },
+  gran: {
+    title: '月曜日 4:00 グランカイン',
+    checked: undefined,
+  },
   world: {
-    title: '4:00 ワールドレイド：アンタラス',
+    title: '２週間 4:00 ワールドレイド：アンタラス',
     checked: undefined,
   },
   varacus: {
-    title: '4:00 ヒーローレイド：ヴァラカス',
-    checked: undefined,
-  },
-  gran: {
-    title: '月曜日 4:00 グランカイン',
+    title: '２週間 4:00 ヒーローレイド：ヴァラカス',
     checked: undefined,
   },
 };
