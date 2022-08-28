@@ -15,6 +15,14 @@ const share = {
     title: '4:00 召喚石ダンジョン 火木土日',
     checked: undefined,
   },
+  experience: {
+    title: '4:00 経験値ダンジョン',
+    checked: undefined,
+  },
+  adena: {
+    title: '4:00 アデナダンジョン',
+    checked: undefined,
+  },
   dimension: {
     title: '4:00 次元、ヴァラカス次元',
     checked: undefined,
@@ -59,7 +67,7 @@ const items = {
     checked: undefined,
   },
   greedy: {
-    title: '4:00 傲慢の塔',
+    title: '4:00 貪欲の殿堂',
     checked: undefined,
   },
   quest: {
