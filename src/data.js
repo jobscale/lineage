@@ -27,7 +27,7 @@ const share = {
     title: '4:00 次元、ヴァラカス次元',
     checked: undefined,
   },
-  world: {
+  event: {
     title: '4:00 イベントワールドボス',
     checked: undefined,
   },
@@ -72,6 +72,18 @@ const items = {
   },
   quest: {
     title: '4:30 アジト個人クエスト',
+    checked: undefined,
+  },
+  feeld: {
+    title: '4:00 フィールドボス',
+    checked: undefined,
+  },
+  world: {
+    title: '4:00 ワールドレイド：アンタラス',
+    checked: undefined,
+  },
+  varacas: {
+    title: '4:00 ヒーローレイド：ヴァラカス',
     checked: undefined,
   },
   gran: {
