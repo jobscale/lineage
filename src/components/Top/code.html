@@ -1,0 +1,18 @@
+<section>
+  <h2>エリカガイド</h2>
+  <div class="time">
+    <span>0:00 まで {{ ts0 }}</span>
+    <span>4:00 まで {{ ts4 }}</span>
+    <span>4:30 まで {{ ts43 }}</span>
+  </div>
+  <fieldset color-scheme="dark">
+    <div v-for="[, item] of Object.entries(app.share)">
+      <label :class="item.checked ? 'off' : ''">
+        <input type="checkbox" v-model="item.checked">
+        {{ item.title }}
+      </label>
+    </div>
+  </fieldset>
+  <Char v-for="char of app.chars" :app="app" :char="char" />
+  <div class="right"><a @click="app.append">&nbsp;✚&nbsp;</a></div>
+</section>

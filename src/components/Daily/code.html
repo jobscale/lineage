@@ -1,0 +1,10 @@
+<section>
+  <fieldset color-scheme="dark">
+    <div v-for="[title, item] of Object.entries(items)">
+      <label :class="item.checked ? 'off' : ''">
+        <input type="checkbox" v-model="item.checked">
+        {{ item.title }}
+      </label>
+    </div>
+  </fieldset>
+</section>

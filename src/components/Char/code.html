@@ -1,0 +1,16 @@
+<section>
+  <div class="h3 char-name">
+    <div class="inline">
+      ✎
+      <input type="text" v-model="char.name" placeholder="キャラクタ名" />
+    </div>
+    <span class="btn-char">
+      <span class="btn-ub">
+        <a v-show="isUp()" @click="up">▲</a>
+        <a v-show="isDown()" @click="down">▼</a>
+      </span>
+      <a @click="remove">削除</a>
+    </span>
+  </div>
+  <Daily :app="app" :items="char.items" />
+</section>
