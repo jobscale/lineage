@@ -28,6 +28,7 @@ input {
 
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .right {
@@ -85,4 +86,28 @@ label.off {
 .btn-ub {
   display: inline-block;
   text-align: center;
+}
+
+.floor {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floor a {
+  color: #444;
+}
+
+.footer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  background: #aaa;
+}
+
+.footer b {
+  margin: 0 1em;
 }
