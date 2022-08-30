@@ -34,8 +34,28 @@ const share = {
 };
 
 const items = {
+  world: {
+    title: '２週間 4:00 ワールドレイド：アンタラス',
+    checked: undefined,
+  },
+  varacus: {
+    title: '２週間 4:00 ヒーローレイド：ヴァラカス',
+    checked: undefined,
+  },
+  gran: {
+    title: '月曜日 4:00 グランカイン',
+    checked: undefined,
+  },
+  fever: {
+    title: '月曜日 4:00 フィーバータイム',
+    checked: undefined,
+  },
   shop: {
     title: '0:00 ショップ',
+    checked: undefined,
+  },
+  supply: {
+    title: '4:00 功績：補給品',
     checked: undefined,
   },
   pan: {
@@ -76,18 +96,6 @@ const items = {
   },
   field: {
     title: '4:00 フィールドボス',
-    checked: undefined,
-  },
-  gran: {
-    title: '月曜日 4:00 グランカイン',
-    checked: undefined,
-  },
-  world: {
-    title: '２週間 4:00 ワールドレイド：アンタラス',
-    checked: undefined,
-  },
-  varacus: {
-    title: '２週間 4:00 ヒーローレイド：ヴァラカス',
     checked: undefined,
   },
 };
