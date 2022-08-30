@@ -1,6 +1,8 @@
 import dayjs from 'dayjs';
 import Char from '../Char/VUE.vue';
 
+const store = localStorage;
+
 export default {
   name: 'Top',
   props: ['app'],
@@ -23,18 +25,50 @@ export default {
 
   methods: {
     init() {
+      this.resetCharData();
       const { ts0, ts4, ts43 } = this.times();
       const after0 = this.span(ts0);
       const after4 = this.span(ts4);
       const after43 = this.span(ts43);
-      setTimeout(() => this.app.reset0(), after0);
-      setTimeout(() => this.app.reset4(), after4);
-      setTimeout(() => this.app.reset43(), after43);
-      this.app.reserve({
+      setTimeout(() => {
+        this.app.reset0();
+        location.href = (() => location.href)();
+      }, after0);
+      setTimeout(() => {
+        this.app.reset4();
+        location.href = (() => location.href)();
+      }, after4);
+      setTimeout(() => {
+        this.app.reset43();
+        location.href = (() => location.href)();
+      }, after43);
+      store.setItem('reserve', JSON.stringify({
         reserve0: dayjs().add(after0, 'milliseconds'),
         reserve4: dayjs().add(after4, 'milliseconds'),
         reserve43: dayjs().add(after43, 'milliseconds'),
-      });
+      }));
+    },
+
+    resetCharData() {
+      const data = this.parse(store.getItem('reserve'));
+      if (!data) return;
+      const ts = dayjs();
+      const check = {};
+      if (dayjs(data.reserve0) < ts) {
+        this.app.reset0();
+        check.reset = true;
+      }
+      if (dayjs(data.reserve4) < ts) {
+        this.app.reset4();
+        check.reset = true;
+      }
+      if (dayjs(data.reserve43) < ts) {
+        this.app.reset43();
+        check.reset = true;
+      }
+      if (check.reset) {
+        location.href = (() => location.href)();
+      }
     },
 
     times() {

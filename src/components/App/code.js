@@ -73,15 +73,6 @@ export default {
       return result;
     },
 
-    resetCharData() {
-      const data = this.parse(store.getItem('reserve'));
-      if (!data) return;
-      const ts = dayjs();
-      if (dayjs(data.reserve0) < ts) this.reset0();
-      if (dayjs(data.reserve4) < ts) this.reset4();
-      if (dayjs(data.reserve43) < ts) this.reset43();
-    },
-
     reset0() {
       const target = ['shop'];
       this.app.chars.forEach(char => {
@@ -127,10 +118,6 @@ export default {
           char.items[key].checked = false;
         });
       });
-    },
-
-    reserve(data) {
-      store.setItem('reserve', JSON.stringify(data));
     },
 
     append() {
