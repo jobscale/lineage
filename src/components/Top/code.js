@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import { logger } from '@jobscale/logger';
 import Char from '../Char/VUE.vue';
 
 const store = localStorage;
@@ -91,13 +92,23 @@ export default {
       const milliseconds = dayjs(to).diff(dayjs());
       return milliseconds > d24h ? milliseconds - d24h : milliseconds;
     },
-  
+
     tsString(milliseconds) {
       const fmt = num => `0${num}`.slice(-2);
       const seconds = Math.floor(milliseconds / 1000);
       const minutes = Math.floor(seconds / 60);
       const hours = Math.floor(minutes / 60);
       return `${hours}:${fmt(minutes % 60)}:${fmt(seconds % 60)}`;
+    },
+
+    parse(text) {
+      try {
+        return JSON.parse(text);
+      }
+      catch (e) {
+        logger.error(e.message);
+        return undefined;
+      }
     },
   },
 }

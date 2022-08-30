@@ -24,8 +24,6 @@ export default {
   methods: {
     init() {
       this.initCharData();
-      this.resetCharData();
-
       this.app.append = () => this.append();
       this.app.reset0 = () => this.reset0();
       this.app.reset4 = () => this.reset4();
