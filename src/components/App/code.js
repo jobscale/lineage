@@ -3,6 +3,7 @@ import { logger } from '@jobscale/logger';
 import { uuid } from '@jobscale/uuid';
 import Top from '../Top/VUE.vue';
 import { share, items } from '../../data';
+import { version } from '../../../.version.json';
 
 const store = localStorage;
 
@@ -13,11 +14,13 @@ export default {
   },
   data() {
     return {
+      version: new Date(Number.parseInt(version, 10)),
       app: undefined,
     };
   },
 
   created() {
+    logger.info({ version: this.version });
     this.init();
   },
 

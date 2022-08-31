@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "docs": "serve docs",
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "npm run version && vue-cli-service serve",
+    "build": "npm run version && vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "version": "echo {\\\"version\\\":\\\"$(date +%s%3N)\\\"} > .version.json",
     "publish": "scripts/publish.sh",
     "test": "npm run lint"
   },

@@ -102,9 +102,10 @@ label.off {
 
 .floor {
   margin: 3em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.floor > div {
+  margin: 3em 0;
 }
 
 .floor a {
