@@ -79,8 +79,13 @@ label.off {
 }
 
 .time {
-  font-family: "Share Tech Mono";
+  font-family: "Arial";
   margin: 0 0 0.5em;
+}
+
+.version {
+  font-family: "Arial";
+  margin: 3em 0;
 }
 
 .time span {
@@ -101,11 +106,6 @@ label.off {
 }
 
 .floor {
-  margin: 3em 0;
-}
-
-.version {
-  font-family: "Share Tech Mono";
   margin: 3em 0;
 }
 
