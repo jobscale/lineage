@@ -28,7 +28,7 @@ const share = {
     checked: undefined,
   },
   event: {
-    title: '4:00 イベントワールドボス',
+    title: '4:00 イベント',
     checked: undefined,
   },
 };

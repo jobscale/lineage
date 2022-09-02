@@ -85,7 +85,7 @@ export default {
     },
 
     reset4() {
-      const target = ['pan', 'tower', 'battle', 'elite', 'friend', 'guild', 'free', 'greedy', 'field'];
+      const target = ['supply', 'pan', 'tower', 'battle', 'elite', 'friend', 'guild', 'free', 'greedy', 'field'];
       this.app.chars.forEach(char => {
         Object.keys(char.items).forEach(key => {
           if (target.indexOf(key) === -1) return;
