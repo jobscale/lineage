@@ -79,7 +79,7 @@ label.off {
 }
 
 .time {
-  font-family: Arial;
+  font-family: "Share Tech Mono";
   margin: 0 0 0.5em;
 }
 
@@ -104,7 +104,8 @@ label.off {
   margin: 3em 0;
 }
 
-.floor > div {
+.version {
+  font-family: "Share Tech Mono";
   margin: 3em 0;
 }
 
